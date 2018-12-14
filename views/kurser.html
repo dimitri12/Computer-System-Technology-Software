@@ -1,0 +1,64 @@
+﻿
+<HTML>
+<head>
+    <title>Evalu8</title>
+    <Link rel="stylesheet" type="text/css" href="/views/evaluate.css" />
+    <meta name="viewport" content="width==device-width, initial-scale:1.0, user-scalable =0" />
+    <script src="scripts/jquery-2.2.0.min.js"></script>
+    <script src="general.js"></script>
+
+</head>
+<body>
+<div ng-controller="basicController">
+    <div id="header">
+        <div class="logo"><a HREF='/profile'>Project <span>Evalu8</span></a></div>
+    </div>
+    <a class="mobile" href="#">MENU</a>
+    <div id="container">
+        <div class="sidebar">
+            <ul id="nav">
+                <li><a class="selected" href="evaluate.html">Start</a></li>
+                <li><a href="kurser.html">Kurser</a></li>
+                <li><a href="Frågor.html">Frågor</a></li>
+                <li><a href="evaluation.html">Utvärderingar</a></li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <h1>Kurser</h1>
+            <div id="box">
+                <div class="box-top">Lägg till kurser, första rutan är kursnamnet och den andra är kurskoden</div>
+                <div class="box-panel">
+                    <form action="/skapakurser" method="post">
+					<label for="kurskod">Kurskod:</label>
+                    <input name="textbox" type="text" id="var2" />
+                    <input type="submit" value="Enter"/>
+                    </form>
+                </div>
+				<div class="box-top">Lägg till Studenter, i den första rutan är studentID och i den andra rutan är kurskoden</div>
+                <div class="box-panel">
+                    <form action="/insertStudent" method="post">
+                        <label for="kurskod">Kurskod:</label>
+                        <input name="textbox1" type="text" id="var2" />
+                        <input name="textbox2" type="text" id="var2" />
+                        <input type="submit" value="Enter" />
+                    </form>
+                </div>
+                <div class="box-top">Registrera Kurser</div>
+                <div class="box-panel">
+				<input name="textbox" type="text" id="var1" />
+				<button onclick="onClickFunction3()">Click</button>
+				<script>
+                function onClickFunction3(){
+					
+				}
+                </script>
+                </div>
+                </div>
+				
+            </div>
+    </div>
+	</div>
+</body>
+</HTML>
+

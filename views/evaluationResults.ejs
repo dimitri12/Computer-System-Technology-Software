@@ -1,0 +1,70 @@
+<head>
+    <title>Evalu8</title>
+    <Link rel="stylesheet" type="text/css" href="/views/evaluate.css" />
+    <meta name="viewport" content="width==device-width, initial-scale:1.0, user-scalable =0" />
+    <script src="scripts/jquery-2.2.0.min.js"></script>
+    <script src="scripts/r.js"></script>
+    <script src="scripts/require.js"></script>
+    <script src="general.js"></script>
+	<script src="server.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="logo"><a HREF='#'>Project <span>Evalu8</span></a></div>
+    </div>
+    <a class="mobile" href="#">MENU</a>
+    <div id="container">
+        <div class="sidebar">
+            <ul id="nav">
+                <li><a class="selected" href="/profile">Start</a></li>
+                <li><a href="/kurser">Kurser</a></li>
+                <li><a href="/frågor">Frågor</a></li>
+                <li><a href="evaluation.html">Utvärderingar</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Kurser</h1>
+            <div id="box">
+                <div class="box-top">Sök efter en specifik utvärdering. Ange referensen iform av kurskod i kombination med datum (ÅÅMMDD)</div>
+                <div class="box-panel">
+                    <input name="textbox" type="text" id="var1" /><br>
+                    
+                    <button  onclick="startExtraction()"
+                            >enter</button>
+                    <p id="demo"></p>
+
+                    <p id="demo1"></p>
+                    <p id="demo2"></p>
+                    <p id="demo3"></p>
+                    <p id="demo4"></p>
+                    <p id="demo5"></p>
+                    <script>
+                    function startExtraction(){
+                        var result=getEvaluationResults(document.getElementById('var1').value);
+                        if(result==0){
+                            document.getElementById("demo").innerHTML = "No results were available";
+                            alert("no results available");
+                        }
+                        else if(result!=0){
+                            document.getElementById("demo").innerHTML = "The result from" + document.getElementById('var1').value;
+                            document.getElementById("demo1").innerHTML = result[0];
+                            document.getElementById("demo2").innerHTML = result[1];
+                            document.getElementById("demo3").innerHTML = result[2];
+                            document.getElementById("demo4").innerHTML = result[3];
+                            document.getElementById("demo5").innerHTML = result[4];
+                        }
+                    }
+                    //samtidigt ska en funktion anropas där en resultattabell skapas med samma referens
+                    document.getElementById('var1').value = "";
+                    
+                    
+                    </script>
+                    
+                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</HTML>

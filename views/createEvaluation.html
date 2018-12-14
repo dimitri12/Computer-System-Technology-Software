@@ -1,0 +1,62 @@
+<!doctype html>
+<HTML>
+
+<head>
+    <title>Utvärdering</title>
+    <Link rel="stylesheet" type="text/css" href="/views/evaluate.css" />
+    
+    <script src="scripts/jquery-2.2.0.min.js"></script>
+    <script src="scripts/r.js"></script>
+    <script src="scripts/require.js"></script>
+    <script src="/views/general.js"></script>
+    <script src="/views/server.js"></script>
+	<script src="/views/engine.js"></script>
+	<script src="/views/logininit.js"></script>
+	<script src="/views/accounts.js"></script>
+  <script src="/views/profilecontroller.js"></script>
+    <script src="createEvaluationTable.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="logo"><a HREF="/profile">Project <span>Evalu8</span></a></div>
+    </div>
+    <a class="mobile" href="/profile">MENU</a>
+    
+    <div id="container">
+        <div class="sidebar">
+            <ul id="nav">
+                <li><a class="selected" href="/profile">Start</a></li>
+                <li><a href="/kurser">Kurser</a></li>
+                <li><a href="/frågor">Frågor</a></li>
+                <li><a href="results.html">Resultat</a></li>
+                <li><a href="/logout">Logga ut</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="box-top">Skapa en utvärdering</div>
+                <div class="box-panel">
+                    <P>Vilken kurs ska ha en utvärdering?</P>
+                    <input name="textbox" type="text" id="var1" />
+                    <P>Mata in ett specifikt datum som utvärderingen ska göras?.</P>
+                    <input name="textbox" type="text" id="var2" />
+                    <P>Mata in en deadline för när utvärderingen ska avslutas.</P>
+                    <input name="textbox" type="text" id="var3" /><BR>
+                    <button  onclick="onClickFunction3()" 
+                            >enter</button>
+                    <p id="demo"></p>
+                    <script>
+                        var drive = require('./createEvaluationTable');
+                        function onClickFunction3() {
+                            drive.createEvaluationAnswered(document.getElementById('var1').value, document.getElementById('var2').value);
+                            drive.createEvaluationPassword(document.getElementById('var1').value, document.getElementById('var2').value, document.getElementById('var3').value);
+                            document.getElementById('var1').value = "";
+                            document.getElementById('var2').value = "";
+                            document.getElementById('var3').value = "";
+                        }
+                    </script>
+                </div>
+        </div>
+        
+    </div>
+</body>
+</HTML>

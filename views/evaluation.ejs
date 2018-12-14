@@ -1,0 +1,238 @@
+<!DOCTYPE>
+<html>
+
+<head>
+</head>
+<body>
+	
+
+<FORM>
+
+<B>Utvärdeingar med emojis, Högskolan i Halmstad av Dimitri Gharam</B><P>
+
+
+  <B>Tycker du att föreläsningen var intressant?</B><P>
+
+<INPUT TYPE="radio" NAME="answer" value="1" id="a1">&#x1F600<BR>
+<INPUT TYPE="radio" NAME="answer" value="2" id="a2">&#x1F611<BR>
+<INPUT TYPE="radio" NAME="answer" value="3" id="a3">&#x1F615<BR>
+<INPUT TYPE="radio" NAME="answer" value="4" id="a4">&#x1F627<BR>
+<INPUT TYPE="radio" NAME="answer" value="5" id="a5">&#x1F621<BR>
+
+<script> 
+function question1(){
+var answer;
+if (document.getElementById('a1').checked) {
+  answer = document.getElementById('a1').value;
+}
+if (document.getElementById('a2').checked) {
+  answer = document.getElementById('a2').value;
+}
+if (document.getElementById('a3').checked) {
+  answer = document.getElementById('a3').value;
+}
+if (document.getElementById('a4').checked) {
+  answer = document.getElementById('a4').value;
+}
+if (document.getElementById('a5').checked) {
+  answer = document.getElementById('a5').value;
+}
+return answer;
+
+}
+</script>
+</FORM>
+
+<FORM METHOD=”post” ACTION="server_file_to_process_form_data">
+
+<B>Beskriv föreläsningen med ett resultat</B><P>
+
+
+<p id="q2"></p>
+
+<script>
+function getQuestion2(){
+	document.getElementById("q2").innerHTML=questions.getEvaluationQuestion(evData.information,2);
+}
+</script>
+
+
+<INPUT TYPE="radio" NAME="answer" value="6" id="b1">&#x1F600<BR>
+<INPUT TYPE="radio" NAME="answer" value="7" id="b2">&#x1F610<BR>
+<INPUT TYPE="radio" NAME="answer" value="8" id="b3">&#x1F615<BR>
+<INPUT TYPE="radio" NAME="answer" value="9" id="b4">&#x1F627<BR>
+<INPUT TYPE="radio" NAME="answer" value="10" id="b5">&#x1F621<BR>
+
+<script> 
+function question2(){
+var answer;
+if (document.getElementById('b1').checked) {
+  answer = document.getElementById('b1').value - 5;
+}
+if (document.getElementById('b2').checked) {
+  answer = document.getElementById('b2').value - 5;
+}
+if (document.getElementById('b3').checked) {
+  answer = document.getElementById('b3').value - 5;
+}
+if (document.getElementById('b4').checked) {
+  answer = document.getElementById('b4').value - 5;
+}
+if (document.getElementById('b5').checked) {
+  answer = document.getElementById('b5').value - 5;
+}
+return answer;
+
+}
+</script>
+</FORM>
+
+<BR>
+<B>Beskriv lärarens undervisning med ett resultat</B><P>
+
+<p id="q3"></p>
+<script>
+function getQuestion3(){
+	document.getElementById("q3").innerHTML=questions.getEvaluationQuestion(evData.information,3);
+}
+</script>
+
+<INPUT TYPE="radio" NAME="answer" value="11" id="c1">&#x1F600<BR>
+<INPUT TYPE="radio" NAME="answer" value="12" id="c2">&#x1F610<BR>
+<INPUT TYPE="radio" NAME="answer" value="13" id="c3">&#x1F615<BR>
+<INPUT TYPE="radio" NAME="answer" value="14" id="c4">&#x1F627<BR>
+<INPUT TYPE="radio" NAME="answer" value="15" id="c5">&#x1F621<BR>
+<BR>
+
+<script> 
+function question3(){
+var answer;
+if (document.getElementById('c1').checked) {
+  answer = document.getElementById('c1').value - 10;
+}
+if (document.getElementById('c2').checked) {
+  answer = document.getElementById('c2').value - 10;
+}
+if (document.getElementById('c3').checked) {
+  answer = document.getElementById('c3').value - 10;
+}
+if (document.getElementById('c4').checked) {
+  answer = document.getElementById('c4').value - 10;
+}
+if (document.getElementById('c5').checked) {
+  answer = document.getElementById('c5').value - 10;
+}
+return answer;
+
+}
+</script>
+</FORM>
+<B>Anser du att du dig själv att har lärt dig något? </B><P>
+
+<p id="q4"></p>
+<script>
+function getQuestion4(){
+	document.getElementById("q4").innerHTML=questions.getEvaluationQuestion(evData.information,4);
+}
+</script>
+
+<INPUT TYPE="radio" NAME="answer" value="16" id="d1">&#x1F600<BR>
+<INPUT TYPE="radio" NAME="answer" value="17" id="d2">&#x1F610<BR>
+<INPUT TYPE="radio" NAME="answer" value="18" id="d3">&#x1F615<BR>
+<INPUT TYPE="radio" NAME="answer" value="19" id="d4">&#x1F627<BR>
+<INPUT TYPE="radio" NAME="answer" value="20" id="d5">&#x1F621<BR>
+<BR>
+
+<script> 
+function question4(){
+var answer;
+if (document.getElementById('d1').checked) {
+  answer = document.getElementById('d1').value - 15;
+}
+if (document.getElementById('d2').checked) {
+  answer = document.getElementById('d2').value - 15;
+}
+if (document.getElementById('d3').checked) {
+  answer = document.getElementById('d3').value - 15;
+}
+if (document.getElementById('d4').checked) {
+  answer = document.getElementById('d4').value - 15;
+}
+if (document.getElementById('d5').checked) {
+  answer = document.getElementById('d5').value - 15;
+}
+return answer;
+
+}
+</script>
+
+</FORM>
+
+<B>Är kunskapen under föreläsningen tillräckligt beskrivande?</B><P>
+
+<p id="q5"></p>
+<script>
+function getQuestion5(){
+	document.getElementById("q5").innerHTML=questions.getEvaluationQuestion(evData.information,5);
+}
+</script>
+
+<INPUT TYPE="radio" NAME="answer" value="21" id="e1">&#x1F600<BR>
+<INPUT TYPE="radio" NAME="answer" value="22" id="e2">&#x1F610<BR>
+<INPUT TYPE="radio" NAME="answer" value="23" id="e3">&#x1F615<BR>
+<INPUT TYPE="radio" NAME="answer" value="24" id="e4">&#x1F627<BR>
+<INPUT TYPE="radio" NAME="answer" value="25" id="e5">&#x1F621<BR>
+<BR>
+<script> 
+function question5(){
+var answer;
+if (document.getElementById('e1').checked) {
+  answer = document.getElementById('e1').value - 20;
+}
+if (document.getElementById('e2').checked) {
+  answer = document.getElementById('e2').value - 20;
+}
+if (document.getElementById('e3').checked) {
+  answer = document.getElementById('e3').value - 20;
+}
+if (document.getElementById('e4').checked) {
+  answer = document.getElementById('e4').value - 20;
+}
+if (document.getElementById('e5').checked) {
+  answer = document.getElementById('e5').value - 20;
+}
+return answer;
+}
+</script>
+</FORM>
+
+
+<button onclick="answerExtraction()" href="/logout">Avsluta</button>
+<script>
+function answerExtraction(){
+var question1 = 1;
+var answer1 = question1();
+insertEvaluationResults(evData.information,user.local.username, question1, answer1);
+var question2 = 2;
+var answer2 = question2();
+insertEvaluationResults(evData.information,user.local.username, question2, answer2);
+var question3 = 3;
+var answer3 = question3();
+insertEvaluationResults(evData.information,user.local.username, question3, answer3);
+
+var question4 = 4;
+var answer4 = question4();
+insertEvaluationResults(evData.information,user.local.username, question4, answer4);
+
+var question5 = 5;
+var answer5 = question5();
+insertEvaluationResults(evData.information,user.local.username, question5, answer5);
+
+insertStudentHasAnswered(evData.information,user.local.username);
+
+}
+</script>
+
+</FORM>
+</body>
+</html>

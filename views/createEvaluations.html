@@ -1,0 +1,51 @@
+<head>
+    <title>Evalu8</title>
+    <Link rel="stylesheet" type="text/css" href="/views/evaluate.css" />
+    <meta name="viewport" content="width==device-width, initial-scale:1.0, user-scalable =0" />
+
+    <script src="general.js"></script>
+	
+
+</head>
+<body>
+    <div id="header">
+        <div class="logo"><a HREF='#'>Project <span>Evalu8</span></a></div>
+    </div>
+    <a class="mobile" href="#">MENU</a>
+    <div id="container">
+        <div class="sidebar">
+            <ul id="nav">
+                <li><a class="selected" href="/profile">Start</a></li>
+                <li><a href="/kurser">Kurser</a></li>
+                <li><a href="/frågor">Frågor</a></li>
+                <li><a href="evaluation.html">Utvärderingar</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Kurser</h1>
+            <div id="box">
+                <div class="box-top">Skapa nya utvärderingar. I den första rutan ska kurskoden matas in, i den andra fältet ska datum matas in (ÅÅMMDD) och den tredje deadline. ex: 15:00, skriv 15</div>
+                <div class="box-panel">
+                
+                    
+                    <form action="/createEvaluation" method="post">
+                        <label for="createEvaluation">Skapa Utvärdering:</label>
+                        <input name="textbox1" type="text" id="var1" />
+                        
+                        <input type="submit" value="Enter" />
+                    </form>
+                    <script>
+                    //samtidigt ska en funktion anropas där en resultattabell skapas med samma referens
+                    document.getElementById('var1').value = "";
+                    
+                    </script>
+                    
+                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</HTML>
+

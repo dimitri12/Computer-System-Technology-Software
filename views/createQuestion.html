@@ -1,0 +1,62 @@
+<head>
+    <title>Evalu8</title>
+    <Link rel="stylesheet" type="text/css" href="/views/evaluate.css" />
+    <meta name="viewport" content="width==device-width, initial-scale:1.0, user-scalable =0" />
+    <script src="scripts/jquery-2.2.0.min.js"></script>
+    <script src="scripts/r.js"></script>
+    <script src="scripts/require.js"></script>
+    <script src="general.js"></script>
+	<script src="server.js"></script>
+    <script src="createQuestion.js"></script>
+
+</head>
+<body>
+    <div id="header">
+        <div class="logo"><a HREF='#'>Project <span>Evalu8</span></a></div>
+    </div>
+    <a class="mobile" href="#">MENU</a>
+    <div id="container">
+        <div class="sidebar">
+            <ul id="nav">
+                <li><a class="selected" href="/profile">Start</a></li>
+                <li><a href="/kurser">Kurser</a></li>
+                <li><a href="/frågor">Frågor</a></li>
+                <li><a href="evaluation.html">Utvärderingar</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Kurser</h1>
+            <div id="box">
+                <div class="box-top">Skapa nya frågor, i den första rutan ska man skapa nya frågor (Max 5) och i den andra rutan ska det vara en referens till den databas du vill lagra denna fråga, ex: DB4002 + datum (ÅÅMMDD)</div>
+                <div class="box-panel">
+                    
+                     <form action="/createQuestion" method="post">
+                        <label for="EvaluationPassword">Skapa en databastabell för frågor med referensen:</label>
+                        <input name="textbox1" type="text" id="var1" />
+
+
+                        <input type="submit" value="Enter" />
+                    </form>
+                    
+                   
+                </div>
+                <div class="box-panel">
+                    
+                     <form action="/storeQuestion" method="post">
+                        <label for="EvaluationPassword">Lägg till en fråga med Referens och fråga:</label>
+                        <input name="textbox1" type="text" id="var1" />
+                        <input name="textbox2" type="text" id="var2" />
+                        <input type="submit" value="Enter" />
+                    </form>
+                    
+                   
+                </div>
+                
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</HTML>
